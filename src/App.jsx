@@ -151,7 +151,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-[#121828] w-full flex justify-end">
+      <div className="bg-[#121828] w-full h-screen max-h-screen overflow-auto scrollbar-none flex justify-end">
         {/* Left Side Panel Section */}
         <section
           className={`w-[20%] max-h-screen space-y-2 ${
@@ -174,12 +174,12 @@ function App() {
             />
           </div>
 
-          <header className="flex justify-start items-center text-white my-5 px-2 xs:gap-1 sm:gap-2">
+          <header className="flex flex-col md:flex-row justify-start items-center text-white my-5 px-2 xs:gap-1 sm:gap-2">
             <div className="">
-              <GiBrain className="xs:text-2xl sm:text-5xl" />
+              <GiBrain className="xs:text-2xl sm:text-5xl animate-pulse" />
             </div>
             <div className="">
-              <p className="xs:text-[12px] sm:text-lg font-serif">Mahim AI</p>
+              <p className="xs:text-[12px] sm:text-lg font-spartan">Mahim AI</p>
               <p className="xs:text-[10px] sm:text-sm font-kaushan">
                 by Gemini
               </p>
@@ -188,8 +188,8 @@ function App() {
 
           <div onClick={() => endSessionStorage()} className="px-2 sm:py-2">
             <div className="w-full flex justify-center items-center rounded-xl xs:gap-1 sm:gap-2 mx-auto xs:h-8 sm:h-10 text-white cursor-pointer bg-sky-400 hover:bg-sky-500">
-              <IoAddCircleOutline className="xs:text-[15px] sm:text-lg" />
-              <p className="xs:text-[12px] sm:text-lg font-spartan">New Chat</p>
+              <IoAddCircleOutline className="xs:text-[25px] sm:text-lg" />
+              <p className="xs:hidden sm:block sm:text-lg font-spartan">New Chat</p>
             </div>
           </div>
 

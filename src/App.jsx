@@ -141,6 +141,11 @@ function App() {
     setMessages([]);
   };
 
+  //Scroll To Bottom
+  useEffect(() => {
+    window.scrollTo(0, document.body.scrollHeight);
+  }, []);
+
   //Scroll Down Conversation To Last Message
   const bottomRef = useRef();
   useEffect(() => {
